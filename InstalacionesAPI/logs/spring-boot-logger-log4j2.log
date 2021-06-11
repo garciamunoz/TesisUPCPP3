@@ -1,0 +1,101 @@
+2021-06-10 17:12:16,369 INFO o.s.b.StartupInfoLogger [main] Starting InstalacionesApiApplication on DESKTOP-648SBJQ with PID 2072 (started by luisa in E:\Luis\UPC\Regreso\Regreso16\PP2\esta vez si\EF\Ciclo2-2020\TBF\wsp\InstalacionesAPI)
+2021-06-10 17:12:16,382 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2021-06-10 17:12:16,384 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-06-10 17:12:16,725 DEBUG o.s.c.a.ClassPathScanningCandidateComponentProvider [main] Identified candidate component class: file [E:\Luis\UPC\Regreso\Regreso16\PP2\esta vez si\EF\Ciclo2-2020\TBF\wsp\InstalacionesAPI\target\classes\com\claro\sefisf\controller\InstalacionesAPIController.class]
+2021-06-10 17:12:16,732 DEBUG o.s.c.a.ClassPathScanningCandidateComponentProvider [main] Ignored because not a concrete top-level class: file [E:\Luis\UPC\Regreso\Regreso16\PP2\esta vez si\EF\Ciclo2-2020\TBF\wsp\InstalacionesAPI\target\classes\com\claro\sefisf\dao\UbicacionDAO.class]
+2021-06-10 17:12:16,739 DEBUG o.s.c.a.ClassPathScanningCandidateComponentProvider [main] Identified candidate component class: file [E:\Luis\UPC\Regreso\Regreso16\PP2\esta vez si\EF\Ciclo2-2020\TBF\wsp\InstalacionesAPI\target\classes\com\claro\sefisf\service\InstalacionesServiceImpl.class]
+2021-06-10 17:12:17,775 DEBUG o.s.c.a.ClassPathScanningCandidateComponentProvider [main] Identified candidate component class: file [E:\Luis\UPC\Regreso\Regreso16\PP2\esta vez si\EF\Ciclo2-2020\TBF\wsp\InstalacionesAPI\target\classes\com\claro\sefisf\service\InstalacionesServiceImpl.class]
+2021-06-10 17:12:18,519 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [main] Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$75cf44ca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-06-10 17:12:19,883 WARN c.z.h.u.DriverDataSource [main] Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2021-06-10 17:12:22,306 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-06-10 17:12:22,400 WARN o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration [main] Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2021-06-10 17:12:22,652 INFO o.s.b.StartupInfoLogger [main] Started InstalacionesApiApplication in 6.789 seconds (JVM running for 7.464)
+2021-06-10 17:15:27,774 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-1] Entrada al metodo getInstalaciones()
+2021-06-10 17:15:27,775 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-1] Valor del parámetro de entrada X -12.0467515
+2021-06-10 17:15:27,775 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-1] Valor del parámetro de entrada y -76.9685416
+2021-06-10 17:15:27,794 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-1] Entrada al método listarUbicaciones()
+2021-06-10 17:15:27,991 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-1] [com.claro.sefisf.entity.Ubicacion@760ded9, com.claro.sefisf.entity.Ubicacion@34b0c1dd, com.claro.sefisf.entity.Ubicacion@3c77af9e, com.claro.sefisf.entity.Ubicacion@7c1f9c3c]
+2021-06-10 17:15:27,995 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-1] Cantidad de ubicaciones encontradas 4
+2021-06-10 17:15:27,995 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-1] Calculando proximidad de puntos
+2021-06-10 17:15:27,997 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-1] Cantidad de ubicaciones encontradas 4
+2021-06-10 17:15:27,997 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-1] Cantidad de ubicaciones encontradas 4
+2021-06-10 17:15:27,999 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-1] Cantidad de ubicaciones encontradas 4
+2021-06-10 17:15:27,999 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-1] Cantidad de ubicaciones encontradas 4
+2021-06-10 17:17:28,094 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-2] Entrada al metodo getInstalaciones()
+2021-06-10 17:17:28,094 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-2] Valor del parámetro de entrada X -12.0467515
+2021-06-10 17:17:28,094 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-2] Valor del parámetro de entrada y -76.9685416
+2021-06-10 17:17:28,095 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-2] Entrada al método listarUbicaciones()
+2021-06-10 17:17:28,098 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-2] [com.claro.sefisf.entity.Ubicacion@678ecc69, com.claro.sefisf.entity.Ubicacion@228c5efc, com.claro.sefisf.entity.Ubicacion@7a1a6bdb, com.claro.sefisf.entity.Ubicacion@13641f33]
+2021-06-10 17:17:28,099 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-2] Cantidad de ubicaciones encontradas 4
+2021-06-10 17:17:28,099 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-2] Calculando proximidad de puntos
+2021-06-10 17:17:28,099 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-2] Cantidad de ubicaciones encontradas 4
+2021-06-10 17:17:28,100 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-2] Cantidad de ubicaciones encontradas 4
+2021-06-10 17:17:28,100 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-2] Cantidad de ubicaciones encontradas 4
+2021-06-10 17:17:28,100 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-2] Cantidad de ubicaciones encontradas 4
+2021-06-10 17:39:39,083 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-4] Entrada al metodo getInstalaciones()
+2021-06-10 17:39:39,083 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-4] Valor del parámetro de entrada X -12.0467515
+2021-06-10 17:39:39,084 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-4] Valor del parámetro de entrada y -76.9685416
+2021-06-10 17:39:39,084 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-4] Entrada al método listarUbicaciones()
+2021-06-10 17:39:39,089 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-4] [com.claro.sefisf.entity.Ubicacion@6cf521da, com.claro.sefisf.entity.Ubicacion@29f7a220, com.claro.sefisf.entity.Ubicacion@2523e5ae, com.claro.sefisf.entity.Ubicacion@18940b61]
+2021-06-10 17:39:39,090 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-4] Cantidad de ubicaciones encontradas 4
+2021-06-10 17:39:39,090 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-4] Calculando proximidad de puntos
+2021-06-10 17:39:39,090 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-4] Cantidad de ubicaciones encontradas 4
+2021-06-10 17:39:39,091 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-4] Cantidad de ubicaciones encontradas 4
+2021-06-10 17:39:39,091 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-4] Cantidad de ubicaciones encontradas 4
+2021-06-10 17:39:39,091 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-4] Cantidad de ubicaciones encontradas 4
+2021-06-10 17:43:36,495 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-7] Entrada al metodo getInstalaciones()
+2021-06-10 17:43:36,495 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-7] Valor del parámetro de entrada X -12.0467515
+2021-06-10 17:43:36,496 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-7] Valor del parámetro de entrada y -76.9685416
+2021-06-10 17:43:36,496 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-7] Entrada al método listarUbicaciones()
+2021-06-10 17:43:36,499 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-7] [com.claro.sefisf.entity.Ubicacion@2ec075ad, com.claro.sefisf.entity.Ubicacion@4c5d32dc, com.claro.sefisf.entity.Ubicacion@5f7714f9, com.claro.sefisf.entity.Ubicacion@72377fa7]
+2021-06-10 17:43:36,500 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-7] Cantidad de ubicaciones encontradas 4
+2021-06-10 17:43:36,500 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-7] Calculando proximidad de puntos
+2021-06-10 17:43:36,500 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-7] Cantidad de ubicaciones encontradas 4
+2021-06-10 17:43:36,500 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-7] Cantidad de ubicaciones encontradas 4
+2021-06-10 17:43:36,501 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-7] Cantidad de ubicaciones encontradas 4
+2021-06-10 17:43:36,501 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-7] Cantidad de ubicaciones encontradas 4
+2021-06-10 17:45:51,207 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-9] Entrada al metodo getInstalaciones()
+2021-06-10 17:45:51,208 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-9] Valor del parámetro de entrada X -12.0467515
+2021-06-10 17:45:51,209 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-9] Valor del parámetro de entrada y -76.9685416
+2021-06-10 17:45:51,210 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-9] Entrada al método listarUbicaciones()
+2021-06-10 17:45:51,216 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-9] [com.claro.sefisf.entity.Ubicacion@7a0a5843, com.claro.sefisf.entity.Ubicacion@3f08d966]
+2021-06-10 17:45:51,217 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-9] Cantidad de ubicaciones encontradas 2
+2021-06-10 17:45:51,218 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-9] Calculando proximidad de puntos
+2021-06-10 17:45:51,219 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-9] Cantidad de ubicaciones encontradas 2
+2021-06-10 17:45:51,219 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-9] Cantidad de ubicaciones encontradas 2
+2021-06-10 18:02:11,935 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-10] Entrada al metodo getInstalaciones()
+2021-06-10 18:02:11,935 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-10] Valor del parámetro de entrada X -12.0467515
+2021-06-10 18:02:11,935 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-10] Valor del parámetro de entrada y -76.9685416
+2021-06-10 18:02:11,936 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-10] Entrada al método listarUbicaciones()
+2021-06-10 18:02:11,942 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-10] [com.claro.sefisf.entity.Ubicacion@1f9ef7c8, com.claro.sefisf.entity.Ubicacion@5a9c7a5f]
+2021-06-10 18:02:11,942 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-10] Cantidad de ubicaciones encontradas 2
+2021-06-10 18:02:11,943 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-10] Calculando proximidad de puntos
+2021-06-10 18:02:11,943 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-10] Cantidad de ubicaciones encontradas 2
+2021-06-10 18:02:11,943 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-10] Cantidad de ubicaciones encontradas 2
+2021-06-10 18:03:58,063 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-2] Entrada al metodo getInstalaciones()
+2021-06-10 18:03:58,064 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-2] Valor del parámetro de entrada X -12.0467515
+2021-06-10 18:03:58,064 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-2] Valor del parámetro de entrada y -76.9685416
+2021-06-10 18:03:58,065 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-2] Entrada al método listarUbicaciones()
+2021-06-10 18:03:58,069 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-2] [com.claro.sefisf.entity.Ubicacion@58e05952, com.claro.sefisf.entity.Ubicacion@191c1b18]
+2021-06-10 18:03:58,070 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-2] Cantidad de ubicaciones encontradas 2
+2021-06-10 18:03:58,070 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-2] Calculando proximidad de puntos
+2021-06-10 18:03:58,071 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-2] Cantidad de ubicaciones encontradas 2
+2021-06-10 18:03:58,072 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-2] Cantidad de ubicaciones encontradas 2
+2021-06-10 18:54:30,119 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-4] Entrada al metodo getInstalaciones()
+2021-06-10 18:54:30,120 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-4] Valor del parámetro de entrada X -12.0467515
+2021-06-10 18:54:30,120 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-4] Valor del parámetro de entrada y -76.9685416
+2021-06-10 18:54:30,120 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-4] Entrada al método listarUbicaciones()
+2021-06-10 18:54:30,129 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-4] [com.claro.sefisf.entity.Ubicacion@46aefe99, com.claro.sefisf.entity.Ubicacion@4d96e006]
+2021-06-10 18:54:30,129 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-4] Cantidad de ubicaciones encontradas 2
+2021-06-10 18:54:30,130 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-4] Calculando proximidad de puntos
+2021-06-10 18:54:30,130 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-4] Cantidad de ubicaciones encontradas 2
+2021-06-10 18:54:30,130 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-4] Cantidad de ubicaciones encontradas 2
+2021-06-10 18:55:35,880 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-7] Entrada al metodo getInstalaciones()
+2021-06-10 18:55:35,881 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-7] Valor del parámetro de entrada X -12.0467515
+2021-06-10 18:55:35,881 INFO c.c.s.c.InstalacionesAPIController [http-nio-8028-exec-7] Valor del parámetro de entrada y -76.9685416
+2021-06-10 18:55:35,881 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-7] Entrada al método listarUbicaciones()
+2021-06-10 18:55:35,884 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-7] [com.claro.sefisf.entity.Ubicacion@4651bfd3, com.claro.sefisf.entity.Ubicacion@50b39352]
+2021-06-10 18:55:35,884 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-7] Cantidad de ubicaciones encontradas 2
+2021-06-10 18:55:35,885 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-7] Calculando proximidad de puntos
+2021-06-10 18:55:35,885 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-7] Cantidad de ubicaciones encontradas 2
+2021-06-10 18:55:35,885 INFO c.c.s.s.InstalacionesServiceImpl [http-nio-8028-exec-7] Cantidad de ubicaciones encontradas 2
