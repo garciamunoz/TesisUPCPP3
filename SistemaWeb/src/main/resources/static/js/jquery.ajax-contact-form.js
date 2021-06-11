@@ -54,6 +54,25 @@ $(document).ready(function() {
 		  			});
 	});
 	
+	// Boton registrar
+	$("#registrar").click(function(){
+		  $.ajax({
+			   type:"get", 
+			   url:"/sefisf", 
+			   async : false,
+			   data: {
+				   direccion: function() {
+			              return $("#direccion").val();
+			            }
+			          }	,
+			          
+			     success : function(data){
+			    	 $("#formul").html(data);	
+						}
+		  			});
+		
+	});
+	
 	//Closing divs - used on Notification boxes
 	notificationReady = function(cls) {
 		//Hide button event
