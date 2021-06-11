@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+	<head>
+
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+		<title>Sistema de evaluación de factibilidad de instalación de servicios fijos</title>
+		
+		<link rel="shortcut icon" href="../static/images/favicon.ico" />
+		
+		<!-- CSS style  static/css/ajax-contact-form.css-->
+		<link rel="stylesheet" type="text/css" th:href="@{/css/ajax-contact-form.css}" />
+
+		<!-- Font awesome -->
+		<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />		
+		
+		<!-- jQuery -->
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=6b224667abmsh2b9fab324adba5ap19749fjsn87bcdcbdacb3"></script>
+		<!-- Ajax Contact Form JS th:src="@{//scriptserver.example.net/myscript.js}" -->
+		<script type="text/javascript" th:src="@{/js/jquery.ajax-contact-form.js}" ></script>	
+	</head>
+	
+	<body>
+	
+		<!--
+		#########################################
+			- Ajax Contact Form / Start -
+		#########################################
+		-->
+		<div class="ajax-contact-form">
+			<div class="container">
+			
+				<!-- Title -->
+				<div class="title">
+					<span>Sistema de evaluación de factibilidad de instalación de servicios fijos <b></b><b></b> </span>
+				</div>
+				
+				<div class="form-holder">
+				
+					<!-- Notification -->
+					<div class="notification canhide">
+						<div class="wrapper">
+							<div class="inner"></div>
+						</div>
+					</div>	
+						
+					<!-- Form -->				
+					<form id="frm_contact" name="frm_contact" action="contact.php" method="post">
+						
+
+						<div class="field">
+							<label for="servicios">Servicios</label>
+							<div class="inputs">
+								<select class="aweform" id="servicios" name="servicios">
+								<option disabled>Seleccionar servicio..</option>
+								<option th:each="ser : ${servicios}" th:value="${ser.id}" th:text="${ser.descripcion}" />
+								</select>
+							</div>  
+						</div>						
+						<div class="field">
+							<label for="name">Nombre<span class="required">*</span></label>
+							<div class="inputs">
+								<input class="aweform" type="text" id="name" name="name" />
+							</div>  
+						</div>
+						
+						<div class="field">
+							<label for="apellido">Apellido<span class="required">*</span></label>
+							<div class="inputs">
+								<input class="aweform" type="text" id="apellido" name="apellido" />
+							</div>  
+						</div>
+						<div class="field">
+									<label for="tipDoc">Tipo de documento</label>
+									<div class="inputs">
+										<select class="aweform" id="tipDoc" name="tipDoc" >
+											<option disabled>Seleccionar tipo de documento..</option>
+											<option th:each="tip : ${tiposDocumento}" th:value="${tip.idTipdoc}" th:text="${tip.descripcion}" />
+										
+										</select>
+									</div>  
+						 </div>						
+						
+						<div class="field">
+							<label for="numDoc">Número documento <span class="required">*</span></label>
+							<div class="inputs">
+								<input class="aweform small" type="text" id="numDoc" name="numDoc" />
+							</div>  
+						</div>
+						<div class="field">
+							<label for="direc">Dirección <span class="required">*</span></label>
+							<div class="inputs">
+								<input class="aweform small" type="text" id="direc" name="direc" />
+							</div>  
+						</div>			
+						
+						<div class="form-submit">
+							<button type="submit" id="submit" name="submit" disabled="disabled"><i class="fa fa-chevron-circle-right"></i> Registrar</button> <button type="submit" id="submit" name="submit"><i class="fa fa-chevron-circle-right"></i> Cancelar</button> <a th:href="@{/evaluar}"><u>Evaluar factibilidad</u></a>      
+						</div>
+					
+							
+						
+					</form>
+					
+				</div>
+				
+			</div>
+		</div>
+		<!--
+		#########################################
+			- Ajax Contact Form / End -
+		#########################################
+		-->
+			
+	</body>
+	
+</html>

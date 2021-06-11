@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: SistemaWeb
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: luisa
+Implementation-Vendor-Id: com.claro
+Build-Jdk: 1.8.0_281
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/SistemaWeb
+Created-By: Maven Integration for Eclipse
+
