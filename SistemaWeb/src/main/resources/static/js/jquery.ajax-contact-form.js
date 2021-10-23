@@ -3,29 +3,36 @@ $(document).ready(function() {
 	//Auto complete off
 	$("input.autocomplete-off").attr("autocomplete", "off");
 	
+	$("#frm_contact").validate({
+        rules: {
+     	   direccion: {
+                        required: true
+                }
+        },
+        messages: {
+     	   direccion: {
+                        required: "La dirección es requerida"
+        }
+      }   
+    });
+	
     $("#map").googleMap({
         zoom: 70, // Initial zoom level (optional)
         coords: [-12.0520571,-76.96617379999999], // Map center (optional)
         type: "ROADMAP" // Map type (optional)
       });
 	
-	//Refresh captcha image
-	$(".change-captcha").click(function(){
-		var rnd = new Date().getTime();
-		var src = $("img.captcha-img").attr("src");
-		
-		if (src.indexOf("?")!=-1) {
-			var ind = src.indexOf("?");
-			src = src.substr(0, ind);
-		}
-		
-		src += "?"+rnd;
-		$("img.captcha-img").attr("src", src);
-		$("#verify").val("");
-	});	
 	
 	$("#evaluar").click(function(){
-		var direccion = $("#direccion").val();
+		//frm_contact
+        if($("#frm_contact").valid()){   // test for validity
+          
+        } else {
+        	
+        }
+		
+		
+		var direccionVal = $("#direccion").val();
 		  $.ajax({
 			   type:"get", 
 			   url:"/evaluarFactibilidad", 
@@ -41,6 +48,7 @@ $(document).ready(function() {
 							 if(data.codigoResp == "1"){
 								 alert("No es factible");
 							 }else{
+								 alert("La solicitud es factible");
 								 for(let i = 0; i < data.listaUbicacion.length; i++){
 									    $("#map").addMarker({
 									        coords: [data.listaUbicacion[i].y, data.listaUbicacion[i].x], // GPS coords
@@ -55,82 +63,71 @@ $(document).ready(function() {
 	});
 	
 	// Boton registrar
-	$("#registrar").click(function(){
-		  $.ajax({
-			   type:"get", 
-			   url:"/sefisf", 
-			   async : false,
-			   data: {
-				   direccion: function() {
-			              return $("#direccion").val();
-			            }
-			          }	,
-			          
-			     success : function(data){
-			    	 $("#formul").html(data);	
-						}
-		  			});
-		
-	});
+//	$("#registrar").click(function(){
+//		  $.ajax({
+//			   type:"get", 
+//			   url:"/sefisf", 
+//			   async : false,
+//			   data: {
+//				   direccion: function() {
+//			              return $("#direccion").val();
+//			            }
+//			          }	,facti
+//			          
+//			     success : function(data){
+//			    	 $("#formul").html(data);	
+//						}
+//		  			});
+//		
+//	});
 	
-	//Closing divs - used on Notification boxes
-	notificationReady = function(cls) {
-		//Hide button event
-		if (!$(".canhide").find("close").length) {
-			$(".canhide").append('<a class="close" href="#">Close</a>');
-			
-			$(".notification .close").click(function(e) {
-				e.preventDefault();
-				$(this).parent().fadeOut(300);
-			});
-		}
-		
-		//Notification type
-		$(".notification").addClass(cls);
-	}
 	
-	//Submit form
-	$("#frm_contact").submit(function(){
-		var action = $(this).attr("action");
-		$("#submit").attr("disabled", "disabled");
-		
-		//Add preloader
-		if (!$(".form-submit").find("img.preloader").length) {
-			$("#submit").after('<img src="images/preloader.gif" class="preloader" />');
-		}
-		
-		//Post form
-		$(".notification").fadeOut(300, function() {
-			$.post(action, {
-				name: 		$("#name").val(),
-				email: 		$("#email").val(),
-				phone: 		$("#phone").val(),
-				subject: 	$("#subject").val(),
-				message: 	$("#message").val(),
-				verify: 	$("#verify").val()
-			},
-				function(data) {
-					//Show notification
-					$(".notification .inner").html(data);
-					$(".notification").fadeIn(300);
-					
-					//Remove preloader
-					$(".form-submit img.preloader").fadeOut("fast", function() {
-						$(this).remove();
-					});
-					
-					//Enable submit button
-					$("#submit").removeAttr("disabled");
-					
-					//Hide form if success
-					if(data.match("success")!=null) {
-						$("#frm_contact").fadeOut("slow");
-					}
-				}
-			);
-		});
-		
-		return false;
-	});
+//	$("#btnRegistrar").click(function(){
+//		alert("HOLA");
+//		  $.ajax({
+//			   type:"get", 
+//			   url:"/registrar", 
+//			   async : false,
+//		   data: {
+//				   
+//				   idServicio: function() {
+//			              return $("#servicios").val();
+//			            }
+//			          ,
+//			        nombre: function() {
+//			              return $("#name").val();
+//			            }
+//			         ,   
+//		          
+//			          apellido: function() {
+//			              return $("#apellido").val();
+//			            }
+//			        ,     
+//			          idTipDoc: function() {
+//			              return $("#tipDoc").val();
+//			            }
+//			         	,     
+//			          
+//			          numDoc: function() {
+//			              return $("#numDoc").val();
+//			            }
+//			       	,    
+//			          
+//				   direccion: function() {
+//			              return $("#direccion").val();
+//			            }
+//				},
+//			          
+//			     success : function(data){
+//			    			alert(data);
+//						}
+//		  			});
+//		
+//	});
+	
+	
+
+	
+	
 	
 });

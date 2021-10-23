@@ -36,16 +36,12 @@
 		<script type="text/javascript" th:src="@{/js/jquery.js}"></script>
 		<script type="text/javascript" th:src="@{/js/jquery-ui.js}"></script>
 		<script type="text/javascript" th:src="@{/js/jquery.googlemap.js}"></script>
-		<script type="text/javascript" th:src="@{/js/jquery.ajax-contact-form.js}" ></script>	
+		<script type="text/javascript" th:src="@{/js/jquery.ajax-contact-form.js}" ></script>
+		<script type="text/javascript" th:src="@{/js/jquery.validate.min.js}" ></script>	
 	</head>
 	
 	<body>
 	
-		<!--
-		#########################################
-			- Ajax Contact Form / Start -
-		#########################################
-		-->
 		<div class="ajax-contact-form" id="formul">
 			<div class="container">
 			
@@ -64,23 +60,17 @@
 					</div>	
 						
 					<!-- Form -->				
-					<form id="frm_contact" name="frm_contact" action="contact.php" method="post">
+					<form id="frm_contact" name="frm_contact" action="#" th:action="@{/sefisf}" th:object="${searcher}" method="post">
 						
 
-		<label for="direccion">Dirección<span>*</span></label>
-		<div class="inputs">
-			<input type="text" id="direccion" name="direccion" placeholder="Ingrese dirección..."/>
-		</div>
-	   <div class="button">
-			<button id="evaluar" type="button">Evaluar</button>
-			<button id="registrar" disabled="disabled" type="button">Registrar</button>
-		</div>	
-
-			
-		
-				
-							
-						
+						<label for="direccion">Dirección<span>*</span></label>
+						<div class="inputs">
+							<input type="text" id="direccion" name="direccion" th:field="*{direccion}" placeholder="Ingrese dirección..." maxlength="150"/>
+						</div>
+					   <div class="button">
+							<button id="evaluar" type="button">Evaluar</button>
+							<input type="submit" id="registrar" disabled="disabled" value="Registrar" class="button"/>
+						</div>	
 					</form>
 					
 				</div>

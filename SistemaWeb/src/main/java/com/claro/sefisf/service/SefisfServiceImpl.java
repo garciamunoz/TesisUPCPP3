@@ -7,8 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.claro.sefisf.dao.ServicioDao;
+import com.claro.sefisf.dao.SolicitudInstalacionDAO;
 import com.claro.sefisf.dao.TipDocDao;
 import com.claro.sefisf.entity.Servicio;
+import com.claro.sefisf.entity.SolicitudInstalacion;
 import com.claro.sefisf.entity.TipDoc;
 
 @Service
@@ -18,6 +20,8 @@ public class SefisfServiceImpl implements SefisfService{
 	private TipDocDao tipDocDao;
 	@Autowired
 	private ServicioDao servicioDao;
+	@Autowired
+	private SolicitudInstalacionDAO solicitudInstalacionDAO;
 	
 	public List<TipDoc> listarTiposDocumento() throws Exception {
 		
@@ -35,6 +39,16 @@ public class SefisfServiceImpl implements SefisfService{
 		iter.forEach(result::add);
 		return result;
 	}
+
+
+
+	
+	public void registrarSolicitud(SolicitudInstalacion bean) throws Exception{
+		solicitudInstalacionDAO.save(bean);
+		
+	}
+	
+
 	
 
 
